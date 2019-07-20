@@ -24,23 +24,25 @@ else if (operator === "remainder") {
 console.log(answer);
 
 
-// switch (operator) {
-//     case 'add':
-//         answer = operand1 + operand2;
-//         break;
-//     case 'subtract':
-//         answer = operand1 - operand2;
-//         break;
-//     case 'multiply':
-//         answer = operand1 * operand2;
-//         break;
-//     case 'divide':
-//         answer = operand1 / operand2;
-//         break;
-//     case 'divide':
-//         answer = operand1 / operand2;
-//         break;
+switch (operator) {
+    case 'add':
+        answer = operand1 + operand2;
+        break;
+    case 'subtract':
+        answer = operand1 - operand2;
+        break;
+    case 'multiply':
+        answer = operand1 * operand2;
+        break;
+    case 'divide':
+        answer = operand1 / operand2;
+        break;
+    case 'divide':
+        answer = operand1 / operand2;
+        break;
 
-//     default:
-//         console.log(answer);
-// }
+    default:
+        answer = "Not a recognized command";
+}
+
+console.log(answer);

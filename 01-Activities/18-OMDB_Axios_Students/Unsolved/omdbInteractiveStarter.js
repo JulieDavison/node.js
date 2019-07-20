@@ -9,10 +9,11 @@
 
 // Include the axios npm package (Don't forget to run "npm install axios" in this folder first!)
 // ...
+var axios = require('axios');
 
-
+console.log(process.argv[2]);
 // Grab or assemble the movie name and store it in a variable called "movieName"
-var movieName = "";
+var movieName = process.argv.slice(2).join('%20');
 // ...
 
 
@@ -23,12 +24,35 @@ var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey
 // This line is just to help us debug against the actual URL.
 console.log(queryUrl);
 
+// const fetchData =  async () => {
+//     try {
+//         var results =  await axios.get(queryUrl);
+//     console.log(results);
+//     }
+//     catch(err) {
+//         console.log(err);
+//     }
+// }
+
+// fetchData();
 
 // Then create a request with axios to the queryUrl
 // ...
+movieName && axios.get(queryUrl)
 
 // If the request with axios is successful
 // ...
-
+    .then(function(response) {
+        console.log(response.data);
+    })
 // Then log the Release Year for the movie
 // ...
+    .catch(function(err){
+        console.log(err);
+    })
+
+
+// Example of slice and join
+//     var someArray = ['no','no','The', 'Terminator']
+
+// someArray.slice(2).join(' ')

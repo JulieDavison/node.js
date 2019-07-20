@@ -8,6 +8,7 @@ var action = process.argv[2];
 var value = process.argv[3];
 
 // We will then create a switch-case statement (if-else would also work).
+
 // The switch-case will direct which function gets run.
 switch (action) {
 case "total":
@@ -24,6 +25,9 @@ case "withdraw":
 
 case "lotto":
   lotto();
+  break;
+default:
+  console.log('Please input value.');
   break;
 }
 
@@ -110,6 +114,6 @@ function lotto() {
   // Otherwise we will tell them they lost 25 cents.
   }
   else {
-    console.log("Sorry. You just lost 25 cents. Maybe you should get a job instead.");
+    console.log("Sorry. You just lost 25 cents.");
   }
 }
